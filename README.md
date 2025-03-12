@@ -1,0 +1,13 @@
+  # Random Recipe Generator
+    #### Video Demo:  <https://youtu.be/Yrg5lIAo9zk>
+    #### Description: My project solves an issue I come across often: I'm hungry, but I don't know what to make, but I also want to make something interesting. Then, the idea came to me: generate a random recipe based on user input. The way it works is, after a person chooses from one of the options, (African, European, Latin, or Asian cuisine), the program will then execute the respective function. Each function works similarly. The functions responsible for generating the actual recipe first generate a random number. That number is then the randomly generated index that then picks from the list of recipe URLs from the corresponding CSV file.
+
+Originally, when prompting the user, I had just a simple list of nationalities. However, I decided to make it look more aesthetic and decided to use the Tabulate Python library to organize the list of options better. I also decided to use a “match case” logic flow instead of “if-else” because I figured it made the code more readable.
+
+I also decided to restructure my code several times. For example, the “read_csv” function came about because I noticed I was copy and pasting a lot of my code from one function to another. So, I decided to instead have a dedicated function for reading all csv files. Then, in each separate function, I then replaced 6 lines of code with just one line. I also kept in mind any corner cases that the program might encounter when used by different users. I made use of “try-except” that prevents the user from giving the program illegal input such as a string of characters or a number not part of the list.
+
+One of the hardest parts of making this program was writing unit tests. Although I know how to write unit tests, I did not know how I could write some to verify that my functions were outputting PDFs. So, I had to research about “pyttest-mock”. Another hard part was familiarizing myself with the “pdfkit” Python library. I had to read quite a lot of documentation before I could figure out how to get my program to successfully produce a PDF.
+
+In the future, I hope to improve my program, and, in fact, I have a few ideas in mind for features. One, I hope to allow the user to pick a specific type of dish. This would mean giving the user the option to not get a random recipe from a region but be able to choose a dish from a region. Another idea I had was to implement a “grocery list” option that can keep track of what ingredients the user may need to buy to make a certain dish. Finally, I would like to implement a feature that allows the user to directly print the recipe from the terminal window.
+
+
